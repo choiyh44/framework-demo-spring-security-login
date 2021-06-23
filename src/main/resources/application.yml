@@ -1,0 +1,40 @@
+project:
+  name: x2commerce
+  
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=x2commerce
+    driver-class-name: org.postgresql.Driver
+    username: x2commerce
+    password: x2commerce123!
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 5
+      connection-timeout: 30000
+      validation-timeout: 5000
+      max-lifetime: 1800000
+      idle-timeout: 300000
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    show-sql: false
+    hibernate.ddl-auto: none
+    hibernate.naming.implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+    #properties.hibernate.format_sql: true
+    
+  messages:
+    basename: i18n/exception
+    encoding: UTF-8
+  jwt:
+    secret: govlepel@$&
+
+  mvc:
+    throw-exception-if-no-handler-found: true
+    
+  redis:
+    host: localhost
+    port: 6379 
+
+logging:
+  level:
+    root: info
+    com.example.demo: info

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="theme-color" content="#ff384b">
+	<meta name="viewport" content="user-scalable=no,viewport-fit=auto,initial-scale=1,minimum-scale=1,maximum-scale=1,width=device-width,target-densitydpi=device-dpi">
+	<title></title>	
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<section id="container">
+		<div>
+			<form name="loginForm" method="post" th:action="@{/login}">
+				userId: <input type="text" name="userId" /><br/>
+				password: <input type="password" name="password" /><br/>
+				<input type="submit" value="로그인">
+			</form> 
+		</div>
+	</section>
+
+</div>
+
+</body>
+</html>
