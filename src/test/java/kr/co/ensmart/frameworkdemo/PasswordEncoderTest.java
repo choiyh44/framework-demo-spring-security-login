@@ -15,9 +15,12 @@ class PasswordEncoderTest {
 
 	@Test
 	void test() {
-		String encPassword = passwordEncoder.encode("ensmart123!");
-		
+	    String plainPassword = "testpassword";
+
+	    String encPassword = passwordEncoder.encode(plainPassword);
 		log.info("encPassword: {}", encPassword);
+        log.info("passwordEncoder.matches(): {}", passwordEncoder.matches(plainPassword, encPassword));
+
 	}
 
 }
